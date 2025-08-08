@@ -27,34 +27,41 @@ function App() {
 
   const projects = [
     {
-      title: "Interactive Quiz App",
-      subtitle: "Engaging Learning Experience",
-      desc: "A dynamic quiz app with interactive questions and scoring.",
-      img: "/assets/images/quiz-app.avif",
+      title: "Inventory Management System App",
+      subtitle: "Simple Stock CRUD Manager",
+      desc: "A lightweight inventory tracking app built with React and Firebase, supporting create, read, update, and delete operations for products.",
+      img: "/image/ims.png", //,
     },
     {
-      title: "E-Commerce Website",
-      subtitle: "Seamless Online Shopping",
-      desc: "A full e-commerce site with React + Firebase.",
-      img: "/assets/images/e-commerc-website",
+      title: "E-commerce Website",
+      subtitle: "React + Redux Shopping Platform",
+      desc: "A modern e-commerce app built with React and Redux featuring API-based product fetching, cart functionality, and class-based components.",
+      img: "/image/ecom.png",
     },
+
     {
       title: "Portfolio Website",
       subtitle: "Showcase Your Work",
       desc: "Personal portfolio site with animations and contact form.",
-      img: "/assets/images/Portfolio-Website.webp",
+      img: "/image/port.png",
     },
     {
-      title: "Task Manager App",
-      subtitle: "Boost Productivity",
-      desc: "To-do and task manager with drag-drop using Vue.js.",
-      img: "/assets/images/task-managment.webp",
+      title: "Job Portal App",
+      subtitle: "MERN Stack Job Listing Platform",
+      desc: "A responsive job portal built with the MERN stack featuring secure JWT authentication, job listings, application tracking, and image upload with Cloudinary.",
+      img: "/image/job.png",
     },
     {
-      title: "Weather Forecast App",
-      subtitle: "Real-Time Weather Updates",
-      desc: "Weather app using OpenWeather API and JS.",
-      img: "/assets/images/Weather-Forecast-App.webp",
+      title: "DoctorOnCall System",
+      subtitle: "Full-Stack Doctor Appointment Platform",
+      desc: "A dynamic appointment system built with React, Node.js, Prisma, and PostgreSQL. Features include authentication, email notifications, doctor/patient dashboards, and real-time prescription and invoice generation.",
+      img: "/image/doct.png", // ✅ Update to your actual image path
+    },
+    {
+      title: "Social Media Web App",
+      subtitle: "MERN Stack Social Platform",
+      desc: "A full-stack social media platform built with React, Node.js, Express, and MongoDB. Users can create posts, like/unlike, follow/unfollow, and manage profiles with JWT-based authentication.",
+      img: "/image/soical.png", // ✅ Replace with correct path to your image
     },
   ];
 
@@ -203,8 +210,42 @@ function App() {
         </motion.h1>
 
         <p className="max-w-xl mx-auto mb-10 text-gray-300">
-          I offer comprehensive web development services tailored to meet your
-          unique business needs...
+          I specialize in delivering{" "}
+          <span className="font-semibold text-white">
+            end-to-end web development solutions
+          </span>{" "}
+          that are designed to align perfectly with your{" "}
+          <span className="font-semibold text-white">business goals</span>. From
+          building{" "}
+          <span className="font-semibold text-white">
+            responsive, user-friendly front-end interfaces
+          </span>{" "}
+          to creating
+          <span className="font-semibold text-white">
+            robust and scalable back-end architectures
+          </span>
+          , I ensure every aspect of your website{" "}
+          <span className="font-semibold text-white">functions seamlessly</span>
+          . Whether you're looking to
+          <span className="font-semibold text-white">launch a new product</span>
+          ,{" "}
+          <span className="font-semibold text-white">
+            enhance your digital presence
+          </span>
+          , or
+          <span className="font-semibold text-white">
+            streamline internal workflows
+          </span>
+          , I provide
+          <span className="font-semibold text-white">
+            tailored solutions
+          </span>{" "}
+          that <span className="font-semibold text-white">drive results</span>{" "}
+          and
+          <span className="font-semibold text-white">
+            deliver real value
+          </span>{" "}
+          to your users.
         </p>
 
         <div className="grid max-w-6xl gap-6 px-4 mx-auto md:grid-cols-4">
@@ -282,8 +323,9 @@ function App() {
                   MERN Stack Developer Intern
                 </h3>
                 <p className="mb-4 text-sm text-gray-600 dark:text-gray-400">
-                  <span className="font-medium">CodeBucket Pvt Ltd, Patna</span>{" "}
-                  • <em>Jan 2025 – Present</em>
+                  <span className="text-xl font-semibold text-blue-400">
+                    CodeBucket Pvt Ltd, Patna • <em>Jan 2025 – July 2025</em>
+                  </span>
                 </p>
                 <ul className="space-y-2 text-sm text-gray-700 list-disc list-inside dark:text-gray-200">
                   <li>
@@ -332,9 +374,11 @@ function App() {
                   Full Stack Web Development Intern
                 </h3>
                 <p className="mb-4 text-sm text-gray-600 dark:text-gray-400">
-                  <span className="font-medium">Bharat Intern (Remote)</span> •{" "}
-                  <em>July 2024 – Aug 2024</em>
+                  <span className="text-xl font-semibold text-blue-400">
+                    Bharat Intern(Remote) • <em>July 2024 – Aug 2025</em>
+                  </span>
                 </p>
+
                 <ul className="space-y-2 text-sm text-gray-700 list-disc list-inside dark:text-gray-200">
                   <li>
                     Built a <strong>Money Tracker Web Application</strong> that
@@ -362,7 +406,7 @@ function App() {
         </div>
       </section>
 
-      {/* Projects Section */}
+      {/* Enhanced Projects Section */}
       <section
         id="projects"
         className="py-20 text-center bg-white dark:bg-black"
@@ -372,12 +416,12 @@ function App() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="mb-10 text-4xl font-bold text-gray-900 dark:text-white"
+          className="mb-12 text-5xl font-extrabold text-gray-900 dark:text-white"
         >
-          Recent <span className="text-yellow-500">Projects</span>
+          <span className="text-yellow-500">Projects</span>
         </motion.h1>
 
-        <div className="grid max-w-6xl gap-6 px-4 mx-auto md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid max-w-6xl gap-8 px-4 mx-auto sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((p, i) => (
             <Tilt
               key={i}
@@ -390,25 +434,52 @@ function App() {
               className="rounded-3xl"
             >
               <motion.div
-                whileHover={{ scale: 1.03 }}
-                transition={{ type: "spring", stiffness: 120 }}
-                className="overflow-hidden transition-all border shadow-xl bg-white/20 dark:bg-white/10 backdrop-blur-md border-white/20 dark:border-white/10 rounded-3xl hover:shadow-2xl"
+                whileHover={{ scale: 1.02 }}
+                transition={{ type: "spring", stiffness: 150 }}
+                className="overflow-hidden shadow-md border border-gray-200 dark:border-gray-800 rounded-3xl hover:shadow-2xl bg-white dark:bg-[#1a1a1a] transition-all duration-300"
               >
-                <img
-                  src={p.img}
-                  alt={p.title}
-                  className="object-cover w-full h-48"
-                />
-                <div className="p-5 text-left">
-                  <h2 className="text-xl font-bold text-gray-800 dark:text-white">
+                <div className="w-full overflow-hidden h-52">
+                  <img
+                    src={p.img}
+                    alt={p.title}
+                    className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
+                  />
+                </div>
+
+                <div className="p-6 text-left">
+                  <h2 className="mb-1 text-2xl font-bold text-gray-900 dark:text-white">
                     {p.title}
                   </h2>
-                  <h3 className="text-gray-600 dark:text-gray-300">
+                  <h3 className="mb-2 text-gray-600 text-md dark:text-gray-400">
                     {p.subtitle}
                   </h3>
-                  <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+                  <p className="text-sm text-gray-500 dark:text-gray-300">
                     {p.desc}
                   </p>
+
+                  {/* Optional Links */}
+                  {(p.github || p.demo) && (
+                    <div className="flex gap-4 mt-4">
+                      {p.demo && (
+                        <a
+                          href={p.demo}
+                          target="_blank"
+                          className="text-sm text-blue-500 hover:underline"
+                        >
+                          Live Demo
+                        </a>
+                      )}
+                      {p.github && (
+                        <a
+                          href={p.github}
+                          target="_blank"
+                          className="text-sm text-gray-600 dark:text-gray-400 hover:underline"
+                        >
+                          GitHub
+                        </a>
+                      )}
+                    </div>
+                  )}
                 </div>
               </motion.div>
             </Tilt>
@@ -419,16 +490,16 @@ function App() {
       {/* About Section */}
       <section
         id="about"
-        className="py-20 bg-gradient-to-br from-[#e0f2fe] to-[#bae6fd] dark:from-[#0f172a] dark:to-[#1e293b]"
+        className="py-20 bg-gradient-to-br from-[#e0f2fe] to-[#bae6fd] dark:from-[#0f172a] dark:to-[#1e293b] flex justify-center items-center"
       >
-        <div className="container flex flex-col items-center gap-8 px-6 mx-auto md:flex-row">
-          {/* Left Image */}
+        <div className="flex flex-col items-center w-full max-w-5xl gap-10 px-6 md:flex-row">
+          {/* Image Card */}
           <motion.div
             initial={{ opacity: 0, x: -60 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="md:w-1/2"
+            className="p-5 border shadow-2xl bg-white/30 dark:bg-white/10 backdrop-blur-2xl rounded-3xl border-blue-300/20 dark:border-sky-400/10"
           >
             <Tilt
               glareEnable={true}
@@ -437,34 +508,40 @@ function App() {
               glarePosition="all"
               scale={1.05}
             >
-              <div className="p-4 border shadow-2xl bg-white/30 dark:bg-white/10 backdrop-blur-2xl rounded-3xl border-blue-300/20 dark:border-sky-400/10">
-                <img
-                  src="/image/img-2.jpg"
-                  alt="about"
-                  className="w-40 h-auto rounded-xl" // w-40 = width 10rem (160px approx)
-                />
-              </div>
+              <img
+                src="/image/unnamed.jpg"
+                alt="about"
+                className="h-auto w-72 rounded-xl" // ⬅️ Image size increased
+              />
             </Tilt>
           </motion.div>
 
-          {/* Right Content */}
+          {/* Text Content */}
           <motion.div
             initial={{ opacity: 0, x: 60 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center md:w-1/2 md:text-left"
+            className="max-w-xl text-center md:text-left"
           >
             <h1 className="mb-2 text-4xl font-bold text-sky-900 dark:text-white">
               About <span className="text-sky-500">Me</span>
             </h1>
             <h2 className="mb-4 text-2xl text-sky-700 dark:text-sky-300">
-              Front End Developer
+              MERN Stack Developer | AI Enthusiast
             </h2>
             <p className="mb-6 leading-relaxed text-sky-800 dark:text-sky-200">
-              I'm a creative Frontend Developer specialized in modern responsive
-              UI using React, TailwindCSS, and animations to craft engaging web
-              experiences.
+              I’m Saurav Kumar, a passionate Full Stack MERN Developer currently
+              have Completed my Master’s in Computer Science from Central
+              University of South Bihar. I build modern, scalable, and AI-driven
+              web applications using React.js, Node.js, Express, and MongoDB.{" "}
+              <br />
+              <br />
+              As a developer intern at CodeBucket Pvt Ltd, I’ve worked on
+              healthcare platforms with features like JWT authentication,
+              doctor-patient dashboards, and real-time APIs. I love solving
+              real-world problems using clean UI, optimized backend logic, and
+              powerful APIs like OpenAI, Gemini, and Infermedica.
             </p>
             <a
               href="/assets/my-cv.pdf"
@@ -515,10 +592,10 @@ function App() {
               </h2>
               <p className="text-gray-700 dark:text-gray-300">
                 {type === "Phone"
-                  ? "+92 300 123 4567"
+                  ? "+91 72744 3664"
                   : type === "Email"
-                  ? "mehtab.alam@gmail.com"
-                  : "Karachi, Sindh, Pakistan"}
+                  ? "sauravkumar91937@gmail.com"
+                  : "Khusropur, Patna, Bihar (India)"}
               </p>
             </motion.div>
           ))}
@@ -531,26 +608,75 @@ function App() {
         className="py-10 bg-[#29323c] dark:bg-gray-900 text-white text-center px-4"
       >
         <h1 className="mb-1 text-2xl font-bold">
-          <span className="text-yellow-500">S</span>auarv{" "}
+          <span className="text-yellow-500">S</span>aurav{" "}
           <span className="text-yellow-500">K</span>umar
         </h1>
         <h2 className="mb-6 text-sm opacity-80">Your Complete Web Solution</h2>
+
+        {/* Social Links */}
         <div className="flex justify-center gap-6 mb-6">
-          {["linkedin", "github", "twitter", "youtube"].map((platform) => (
-            <a
-              key={platform}
-              href="#"
-              className="transition duration-300 transform hover:scale-125 hover:text-yellow-400"
-              aria-label={platform}
-            >
-              <img
-                src={`/assets/icons/${platform}.png`}
-                alt={platform}
-                className="w-6 h-6 filter brightness-90 hover:brightness-110"
-              />
-            </a>
-          ))}
+          {/* LinkedIn */}
+          <a
+            href="https://www.linkedin.com/in/sauravkumar5/" // ✅ replace with yours if different
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition duration-300 transform hover:scale-125 hover:text-yellow-400"
+            aria-label="LinkedIn"
+          >
+            <img
+              src="/image/linkedin.png"
+              alt="LinkedIn"
+              className="w-6 h-6 filter brightness-90 hover:brightness-110"
+            />
+          </a>
+
+          {/* GitHub */}
+          <a
+            href="https://github.com/sauravydv5" // ✅ replace with yours if different
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition duration-300 transform hover:scale-125 hover:text-yellow-400"
+            aria-label="GitHub"
+          >
+            <img
+              src="/image/github.png"
+              alt="GitHub"
+              className="w-6 h-6 filter brightness-90 hover:brightness-110"
+            />
+          </a>
+
+          {/* Twitter */}
+          <a
+            href="https://x.com/Saurav_ydv_5" // ✅ replace with yours if different
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition duration-300 transform hover:scale-125 hover:text-yellow-400"
+            aria-label="Twitter"
+          >
+            <img
+              src="/image/x.png"
+              alt="Twitter"
+              className="w-6 h-6 filter brightness-90 hover:brightness-110"
+            />
+          </a>
+
+          {/* YouTube */}
+          <a
+            href="https://www.instagram.com/saurav_ydv5/" // ✅ replace with yours if different
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition duration-300 transform hover:scale-125 hover:text-yellow-400"
+            aria-label="Instagram"
+          >
+            <img
+              src="/image/insta.jpeg"
+              alt="Instagram"
+              className="w-6 h-6 filter brightness-90 hover:brightness-110"
+            />
+          </a>
         </div>
+
+        {/* Footer Bottom */}
         <p className="text-xs opacity-70">
           © 2025 Saurav. All rights reserved.
         </p>
