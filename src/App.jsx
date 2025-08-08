@@ -65,6 +65,25 @@ function App() {
     },
   ];
 
+  const skills = [
+    { name: "HTML", img: "/image/html.png" },
+    { name: "CSS", img: "/image/css.jpeg" },
+    { name: "JavaScript", img: "/image/js.png" },
+    { name: "React", img: "/image/react.png" },
+    { name: "Node.js", img: "/image/node.jpeg" },
+    { name: "MongoDB", img: "/image/mongo.png" },
+    { name: "SQL", img: "/image/sql.png" },
+    { name: "Express", img: "/image/express.png" },
+    { name: "Redux", img: "/image/redux.png" },
+    { name: "Tailwind", img: "/image/tailwind.jpeg" },
+    { name: "Bootstrap", img: "/image/bootstrap.jpeg" },
+    { name: "Python", img: "/image/python.jpeg" },
+    { name: "Git", img: "/image/git.png" },
+
+    { name: "Postman", img: "/image/post.png" },
+    { name: "RestFul Api", img: "/image/rest.jpeg" },
+  ];
+
   return (
     <>
       {/* Header */}
@@ -105,31 +124,36 @@ function App() {
 
           {/* Menu Items */}
           <ul
-            className={`md:flex md:space-x-8 absolute md:static bg-[#1f2937] md:bg-transparent w-full md:w-auto left-0 top-full transition-all duration-500 ease-in-out ${
+            className={`md:flex md:space-x-6 absolute md:static bg-[#1f2937] md:bg-transparent w-full md:w-auto left-0 top-full transition-all duration-500 ease-in-out ${
               menuActive
                 ? "opacity-100 visible"
                 : "opacity-0 invisible md:opacity-100 md:visible"
             }`}
           >
-            {["Home", "Services", "Projects", "About", "Contact"].map(
-              (item) => (
-                <li key={item} className="group">
-                  <a
-                    href={`#${item.toLowerCase()}`}
-                    onClick={handleItemClick}
-                    className="relative block px-6 py-3 text-white transition duration-300 hover:text-yellow-400"
-                  >
-                    {item}
-                    {/* Animated underline */}
-                    <span className="absolute left-6 bottom-2 w-0 h-[2px] bg-yellow-400 transition-all duration-300 group-hover:w-1/2"></span>
-                  </a>
-                </li>
-              )
-            )}
+            {[
+              "Home",
+              "Services",
+              "Skills",
+              "Experience",
+              "Projects",
+              "About",
+              "Contact",
+            ].map((item) => (
+              <li key={item} className="group">
+                <a
+                  href={`#${item.toLowerCase()}`}
+                  onClick={handleItemClick}
+                  className="relative block px-6 py-3 text-white transition duration-300 hover:text-yellow-400"
+                >
+                  {item}
+                  {/* Animated underline */}
+                  <span className="absolute left-6 bottom-2 w-0 h-[2px] bg-yellow-400 transition-all duration-300 group-hover:w-1/2"></span>
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
       </header>
-
       {/* Hero Section */}
       <section
         id="hero"
@@ -209,7 +233,7 @@ function App() {
           Serv<span className="text-yellow-400">i</span>ces
         </motion.h1>
 
-        <p className="max-w-xl mx-auto mb-10 text-gray-300">
+        <p className="max-w-4xl mx-auto mb-10 text-base leading-7 text-gray-300 sm:text-lg sm:leading-8">
           I specialize in delivering{" "}
           <span className="font-semibold text-white">
             end-to-end web development solutions
@@ -220,31 +244,27 @@ function App() {
           <span className="font-semibold text-white">
             responsive, user-friendly front-end interfaces
           </span>{" "}
-          to creating
+          to creating{" "}
           <span className="font-semibold text-white">
             robust and scalable back-end architectures
           </span>
           , I ensure every aspect of your website{" "}
           <span className="font-semibold text-white">functions seamlessly</span>
-          . Whether you're looking to
+          . Whether you're looking to{" "}
           <span className="font-semibold text-white">launch a new product</span>
           ,{" "}
           <span className="font-semibold text-white">
             enhance your digital presence
           </span>
-          , or
+          , or{" "}
           <span className="font-semibold text-white">
             streamline internal workflows
           </span>
-          , I provide
-          <span className="font-semibold text-white">
-            tailored solutions
-          </span>{" "}
+          , I provide{" "}
+          <span className="font-semibold text-white">tailored solutions</span>{" "}
           that <span className="font-semibold text-white">drive results</span>{" "}
-          and
-          <span className="font-semibold text-white">
-            deliver real value
-          </span>{" "}
+          and{" "}
+          <span className="font-semibold text-white">deliver real value</span>{" "}
           to your users.
         </p>
 
@@ -301,6 +321,61 @@ function App() {
               <div className="absolute -inset-0.5 rounded-3xl bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 opacity-0 group-hover:opacity-100 blur-lg transition-opacity duration-500 z-[-1]" />
             </Tilt>
           ))}
+        </div>
+      </section>
+
+      {/* Skills Section */}
+      <section
+        id="skills"
+        className="py-20 bg-gradient-to-br from-[#f0fdfa] to-[#ccfbf1] dark:from-[#0f172a] dark:to-[#1e293b]"
+      >
+        <div className="px-6 mx-auto text-center max-w-7xl">
+          <motion.h1
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="mb-12 text-4xl font-bold text-teal-800 dark:text-white"
+          >
+            <span className="text-pink-500">My</span> Skills
+          </motion.h1>
+
+          {/* Responsive Grid */}
+          <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+            {skills.map((skill, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.05 }}
+              >
+                <Tilt
+                  glareEnable={true}
+                  glareMaxOpacity={0.25}
+                  glareBorderRadius="1rem"
+                  scale={1.05}
+                >
+                  <div className="relative w-full h-40 overflow-hidden transition-all duration-300 border shadow-lg rounded-2xl border-white/20 group hover:scale-105 backdrop-blur-md">
+                    {/* Gradient Glow Background */}
+                    <div className="absolute transition-all duration-500 -inset-1 rounded-2xl bg-gradient-to-br from-pink-400 via-purple-500 to-indigo-500 blur opacity-20 group-hover:opacity-40" />
+
+                    {/* Skill Image Full Fill */}
+                    <img
+                      src={skill.img}
+                      alt={skill.name}
+                      className="object-cover w-full h-full"
+                    />
+
+                    {/* Skill Name Overlay */}
+                    <div className="absolute inset-0 flex items-end justify-center bg-black/30">
+                      <p className="pb-2 text-base font-bold text-transparent bg-gradient-to-r from-pink-400 via-fuchsia-500 to-purple-600 bg-clip-text drop-shadow-md">
+                        {skill.name}
+                      </p>
+                    </div>
+                  </div>
+                </Tilt>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -405,7 +480,6 @@ function App() {
           </div>
         </div>
       </section>
-
       {/* Enhanced Projects Section */}
       <section
         id="projects"
@@ -486,7 +560,6 @@ function App() {
           ))}
         </div>
       </section>
-
       {/* About Section */}
       <section
         id="about"
@@ -553,7 +626,6 @@ function App() {
           </motion.div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-white dark:bg-gray-900">
         <motion.h1
@@ -601,7 +673,6 @@ function App() {
           ))}
         </div>
       </section>
-
       {/* Footer */}
       <footer
         id="footer"
