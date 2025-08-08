@@ -592,7 +592,7 @@ function App() {
               </h2>
               <p className="text-gray-700 dark:text-gray-300">
                 {type === "Phone"
-                  ? "+91 72744 3664"
+                  ? "+91 72774 43664"
                   : type === "Email"
                   ? "sauravkumar91937@gmail.com"
                   : "Khusropur, Patna, Bihar (India)"}
