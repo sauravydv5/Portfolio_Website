@@ -29,39 +29,45 @@ function App() {
     {
       title: "Inventory Management System App",
       subtitle: "Simple Stock CRUD Manager",
-      desc: "A lightweight inventory tracking app built with React and Firebase, supporting create, read, update, and delete operations for products.",
-      img: "/image/ims.png", //,
+      desc: "A lightweight inventory tracking app built with React, supporting create, read, update, and delete operations for products.",
+      img: "/image/ims.png",
+      link: "https://imsmanag.netlify.app", // ✅ Live link here
+    },
+    {
+      title: "Portfolio Website",
+      subtitle: "Showcase Your Work",
+      desc: "Personal portfolio site with animations and contact form.",
+      img: "/image/port.png",
+      link: "https://myportfoliox2.netlify.app/",
+    },
+    {
+      title: "Social Media Web App",
+      subtitle: "MERN Stack Social Platform",
+      desc: "A full-stack social media platform built with React, Node.js, Express, and MongoDB. Users can create posts, like/unlike, follow/unfollow, and manage profiles with JWT-based authentication.",
+      img: "/image/soical.png",
+      link: "###",
     },
     {
       title: "E-commerce Website",
       subtitle: "React + Redux Shopping Platform",
       desc: "A modern e-commerce app built with React and Redux featuring API-based product fetching, cart functionality, and class-based components.",
       img: "/image/ecom.png",
+      link: "###",
     },
 
-    {
-      title: "Portfolio Website",
-      subtitle: "Showcase Your Work",
-      desc: "Personal portfolio site with animations and contact form.",
-      img: "/image/port.png",
-    },
     {
       title: "Job Portal App",
       subtitle: "MERN Stack Job Listing Platform",
       desc: "A responsive job portal built with the MERN stack featuring secure JWT authentication, job listings, application tracking, and image upload with Cloudinary.",
       img: "/image/job.png",
+      link: "###",
     },
     {
       title: "DoctorOnCall System",
       subtitle: "Full-Stack Doctor Appointment Platform",
       desc: "A dynamic appointment system built with React, Node.js, Prisma, and PostgreSQL. Features include authentication, email notifications, doctor/patient dashboards, and real-time prescription and invoice generation.",
-      img: "/image/doct.png", // ✅ Update to your actual image path
-    },
-    {
-      title: "Social Media Web App",
-      subtitle: "MERN Stack Social Platform",
-      desc: "A full-stack social media platform built with React, Node.js, Express, and MongoDB. Users can create posts, like/unlike, follow/unfollow, and manage profiles with JWT-based authentication.",
-      img: "/image/soical.png", // ✅ Replace with correct path to your image
+      img: "/image/doct.png",
+      link: "###",
     },
   ];
 
